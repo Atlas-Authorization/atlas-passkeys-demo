@@ -6,7 +6,7 @@ import Link from 'next/link';
 /**
  * Protected account page. `<ManagePasskeys>` lists the user's enrolled passkeys
  * and drives enrollment of a new one (the WebAuthn create ceremony + FAPI
- * begin/finish). The route is also gated by the edge middleware; `<SignedOut>`
+ * begin/finish). The route is also gated by the proxy; `<SignedOut>`
  * is a client-side backstop.
  */
 export default function AccountPage() {

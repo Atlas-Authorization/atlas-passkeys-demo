@@ -10,8 +10,8 @@ with Atlas.
   sign-in (a WebAuthn assertion via the FAPI passkey begin/finish endpoints).
 - **`app/account/page.tsx`** — `<ManagePasskeys>` lists enrolled passkeys and
   drives enrollment of a new one (the WebAuthn create ceremony). Gated by the
-  edge middleware + a `<SignedOut><RedirectToSignIn/></SignedOut>` backstop.
-- **`middleware.ts`** — protects `/account`.
+  proxy + a `<SignedOut><RedirectToSignIn/></SignedOut>` backstop.
+- **`proxy.ts`** — protects `/account`.
 
 Under the hood these components use the low-level passkey helpers from
 `@atlasauth/js` (`passkeysSupported`, `createPasskey`, `getPasskeyAssertion`) —
